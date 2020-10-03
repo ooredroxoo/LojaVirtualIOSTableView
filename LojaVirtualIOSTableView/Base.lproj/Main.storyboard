@@ -184,10 +184,10 @@
             </objects>
             <point key="canvasLocation" x="-52" y="97"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Produtos View Controller-->
         <scene sceneID="Bfb-0B-DA8">
             <objects>
-                <viewController id="7Ll-rK-Qtd" customClass="MainViewController" customModule="LojaVirtualIOSTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Ll-rK-Qtd" customClass="ProdutosViewController" customModule="LojaVirtualIOSTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gr3-Pi-w93">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,6 +241,9 @@
                             <constraint firstItem="zcQ-Zg-0qv" firstAttribute="trailing" secondItem="Ewf-uJ-58U" secondAttribute="trailing" constant="10" id="uOv-kF-ice"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="produtosTableView" destination="Int-ke-k12" id="GEi-TX-RMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1T-Jv-fRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
