@@ -60,9 +60,6 @@ extension ProdutosViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let produto: Produto = self.gruposDeProdutos[indexPath.section].produtos[indexPath.row]
-//        let cell :UITableViewCell = self.produtosTableView.dequeueReusableCell(withIdentifier: "produto", for: indexPath)
-//        cell.textLabel?.text = produto.nome
-//        cell.detailTextLabel?.text = "R$ \(produto.preco)"
         let cell : ProdutoTableViewCell = self.produtosTableView.dequeueReusableCell(withIdentifier: "customProduct", for: indexPath) as? ProdutoTableViewCell ?? ProdutoTableViewCell();
         cell.nameLabel.text = produto.nome;
         cell.priceLabel.text = "R$ \(produto.preco)"
