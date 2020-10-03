@@ -226,6 +226,54 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customProduct" rowHeight="90" id="LYo-ah-dYW" customClass="ProdutoTableViewCell" customModule="LojaVirtualIOSTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="83.5" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LYo-ah-dYW" id="W8l-FO-ah4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultCell" translatesAutoresizingMaskIntoConstraints="NO" id="zGp-iP-bk2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="AMk-kY-ZQo"/>
+                                                    </constraints>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dln-BU-Iwr">
+                                                    <rect key="frame" x="16" y="28" width="343" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzF-DC-XpA">
+                                                    <rect key="frame" x="16" y="63" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dln-BU-Iwr" firstAttribute="leading" secondItem="qzF-DC-XpA" secondAttribute="leading" id="3EP-iF-oRE"/>
+                                                <constraint firstItem="zGp-iP-bk2" firstAttribute="centerX" secondItem="Dln-BU-Iwr" secondAttribute="centerX" id="BOS-cx-5Eg"/>
+                                                <constraint firstItem="Dln-BU-Iwr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="W8l-FO-ah4" secondAttribute="leading" id="FjD-qm-pb8"/>
+                                                <constraint firstItem="qzF-DC-XpA" firstAttribute="top" secondItem="Dln-BU-Iwr" secondAttribute="bottom" constant="5" id="GRU-ZF-kfv"/>
+                                                <constraint firstAttribute="trailing" secondItem="qzF-DC-XpA" secondAttribute="trailing" constant="16" id="Pnr-0u-2BA"/>
+                                                <constraint firstItem="Dln-BU-Iwr" firstAttribute="trailing" secondItem="qzF-DC-XpA" secondAttribute="trailing" id="PyT-xm-FhN"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Dln-BU-Iwr" secondAttribute="trailing" id="Vcf-ux-ZTf"/>
+                                                <constraint firstItem="qzF-DC-XpA" firstAttribute="leading" secondItem="W8l-FO-ah4" secondAttribute="leading" constant="16" id="aNK-xM-UZK"/>
+                                                <constraint firstItem="zGp-iP-bk2" firstAttribute="width" secondItem="W8l-FO-ah4" secondAttribute="width" id="hwC-qi-XX3"/>
+                                                <constraint firstItem="zGp-iP-bk2" firstAttribute="centerY" secondItem="W8l-FO-ah4" secondAttribute="centerY" id="kIB-Sz-Tdi"/>
+                                                <constraint firstAttribute="bottom" secondItem="qzF-DC-XpA" secondAttribute="bottom" constant="6" id="uhT-q5-Va8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                                        <connections>
+                                            <outlet property="bgImage" destination="zGp-iP-bk2" id="3LI-I3-THA"/>
+                                            <outlet property="nameLabel" destination="Dln-BU-Iwr" id="Mdk-4F-ZY0"/>
+                                            <outlet property="priceLabel" destination="qzF-DC-XpA" id="UVb-eP-ODk"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -251,6 +299,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="DefaultCell" width="2808" height="1872"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

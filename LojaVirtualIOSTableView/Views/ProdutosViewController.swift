@@ -30,9 +30,11 @@ class ProdutosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Eletrónicos", produtos: self.produtosEletronicos))
-        self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Lazer", produtos: self.produtosLazer))
+        self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Eletrônicos", produtos: self.produtosEletronicos, bgImage: UIImage(named: "TechCell") ?? UIImage()))
+        self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Lazer", produtos: self.produtosLazer, bgImage: UIImage(named: "FunCell") ?? UIImage()))
         self.produtosTableView.dataSource = self
+        self.produtosTableView.rowHeight = 90.0
+        self.produtosTableView.estimatedRowHeight = 90
         
     }
 
@@ -58,9 +60,13 @@ extension ProdutosViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let produto: Produto = self.gruposDeProdutos[indexPath.section].produtos[indexPath.row]
-        let cell :UITableViewCell = self.produtosTableView.dequeueReusableCell(withIdentifier: "produto", for: indexPath)
-        cell.textLabel?.text = produto.nome
-        cell.detailTextLabel?.text = "R$ \(produto.preco)"
+//        let cell :UITableViewCell = self.produtosTableView.dequeueReusableCell(withIdentifier: "produto", for: indexPath)
+//        cell.textLabel?.text = produto.nome
+//        cell.detailTextLabel?.text = "R$ \(produto.preco)"
+        let cell : ProdutoTableViewCell = self.produtosTableView.dequeueReusableCell(withIdentifier: "customProduct", for: indexPath) as? ProdutoTableViewCell ?? ProdutoTableViewCell();
+        cell.nameLabel.text = produto.nome;
+        cell.priceLabel.text = "R$ \(produto.preco)"
+        cell.bgImage.image = self.gruposDeProdutos[indexPath.section].bgImage
         return cell
     }
     
