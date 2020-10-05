@@ -30,17 +30,32 @@ class ProdutosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        configureTableView()
+        
         self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Eletrônicos", produtos: self.produtosEletronicos, bgImage: UIImage(named: "TechCell") ?? UIImage()))
         self.gruposDeProdutos.append(ColecaoDeProdutos(nome: "Lazer", produtos: self.produtosLazer, bgImage: UIImage(named: "FunCell") ?? UIImage()))
-        self.produtosTableView.dataSource = self
-        self.produtosTableView.rowHeight = 90.0
-        self.produtosTableView.estimatedRowHeight = 90
         
+    }
+    
+    private func configureTableView() {
+        self.produtosTableView.dataSource = self
+        self.produtosTableView.delegate = self
+        self.produtosTableView.rowHeight = UITableView.automaticDimension
+        self.produtosTableView.estimatedRowHeight = 150
+        self.produtosTableView.tableFooterView = .none
     }
 
 
 }
 
+
+// MARK: - TABLEVIEW - DELEGATE
+extension ProdutosViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selecionou a célula \(indexPath.row) da seção \(indexPath.section)")
+    }
+}
 
 // MARK: - TABLEVIEW - DATASOURCE
 extension ProdutosViewController : UITableViewDataSource {

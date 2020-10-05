@@ -19,6 +19,7 @@
 		BC317EBB2527FCFA006F3E61 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC317EBA2527FCFA006F3E61 /* Produto.swift */; };
 		BC317EC3252800A9006F3E61 /* ColecaoDeProdutos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC317EC2252800A9006F3E61 /* ColecaoDeProdutos.swift */; };
 		BC317EC825280AAC006F3E61 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC317EC725280AAC006F3E61 /* ProdutoTableViewCell.swift */; };
+		BC317ECD252BE507006F3E61 /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC317ECC252BE507006F3E61 /* Categoria.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BC317EBA2527FCFA006F3E61 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		BC317EC2252800A9006F3E61 /* ColecaoDeProdutos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColecaoDeProdutos.swift; sourceTree = "<group>"; };
 		BC317EC725280AAC006F3E61 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
+		BC317ECC252BE507006F3E61 /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				BC317EBA2527FCFA006F3E61 /* Produto.swift */,
 				BC317EC2252800A9006F3E61 /* ColecaoDeProdutos.swift */,
+				BC317ECC252BE507006F3E61 /* Categoria.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC317EC825280AAC006F3E61 /* ProdutoTableViewCell.swift in Sources */,
+				BC317ECD252BE507006F3E61 /* Categoria.swift in Sources */,
 				BC317E822527E333006F3E61 /* ProdutosViewController.swift in Sources */,
 				BC317EB52527F50B006F3E61 /* ProdutosTableViewController.swift in Sources */,
 				BC317E7E2527E333006F3E61 /* AppDelegate.swift in Sources */,

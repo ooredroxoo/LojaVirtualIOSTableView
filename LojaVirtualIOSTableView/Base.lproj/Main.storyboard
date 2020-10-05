@@ -265,6 +265,7 @@
                                                 <constraint firstItem="zGp-iP-bk2" firstAttribute="width" secondItem="W8l-FO-ah4" secondAttribute="width" id="hwC-qi-XX3"/>
                                                 <constraint firstItem="zGp-iP-bk2" firstAttribute="centerY" secondItem="W8l-FO-ah4" secondAttribute="centerY" id="kIB-Sz-Tdi"/>
                                                 <constraint firstAttribute="bottom" secondItem="qzF-DC-XpA" secondAttribute="bottom" constant="6" id="uhT-q5-Va8"/>
+                                                <constraint firstItem="Dln-BU-Iwr" firstAttribute="top" secondItem="W8l-FO-ah4" secondAttribute="top" constant="28" id="wXU-0F-CWT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
